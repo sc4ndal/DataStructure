@@ -1,10 +1,9 @@
-package week5;
-
+package week6;
 
 public class LinkedList<E> implements ListInterface<E> {
 	private Node<E> head;
 	private int numItems;
-
+	
 	public LinkedList() { 			// 생성자
 		numItems = 0;
 		head = new Node<>(null, null); 	// 더미 헤드
@@ -65,7 +64,7 @@ public class LinkedList<E> implements ListInterface<E> {
 			return null; 		// 에러
 	}
  
-	public Node<E> getNode(int index) {
+		public Node<E> getNode(int index) {
 		if (index >= -1 && index <= numItems - 1) {
 			Node<E> currNode = head;  	// 더미 노드
 			for (int i = 0; i <= index; i++) {
